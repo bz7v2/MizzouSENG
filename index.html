@@ -34,10 +34,11 @@
                     .classed("bar", true)
                     .transition()
                     .duration(1000)
-                    .style("width", function(candidate) {
-                        return candidate.value * 10 + "px";
+                    .style({
+                        "width": function(candidate) {
+                            return candidate.value * 10 + "px";
+                        }
                     });
-
             }
         });
     </script>
