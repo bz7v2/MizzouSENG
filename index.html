@@ -44,4 +44,39 @@
     </script>
 </body>
 
+<body>
+
+    <div id="graph1"></div>
+
+    <script>
+        var url = "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-democratic-primary";
+
+        $.ajax(url, {
+            dataType: "jsonp",
+            jsonpCallback: "pollsterCallback",
+            cache: true,
+            success: function(data) {
+
+                var candidateBar = d3.select("#graph1").selectAll("div").data(data.estimates),
+                    candidateWrapper = candidateBar.enter().append("div").classed("group", true);
+
+                candidateWrapper.append("div")
+                    .classed("bar", true)
+                    .transition()
+                    .duration(1000)
+                    .style({
+                        "width": function(candidate) {
+                            return candidate.value * 10 + "px";
+                        }
+                    });
+                candidateWrapper.append("div")
+                    .classed("choice", true)
+                    .text(function(candidate) {
+                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
+                    });
+
+            }
+        });
+    </script>
+</body>
 </html>

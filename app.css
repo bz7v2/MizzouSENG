@@ -18,6 +18,23 @@ body {
     margin: 5px;
     float: left;
 }
+#graph1 .choice {
+    float: left;
+    font-family: arial;
+    font-size: 1.5em;
+    min-width: 200px;
+    text-align: right;
+    margin: 8px 5px;
+}
+#graph1 .bar {
+    border-radius: 25px;
+    border: 2px solid #000000;
+    width: 0;
+    height: 35px;
+    background-color: blue;
+    margin: 5px;
+    float: left;
+}
 .group:after {
   content: "";
   display: table;
