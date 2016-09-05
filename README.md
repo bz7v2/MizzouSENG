@@ -4,7 +4,8 @@
 2. Program retrives corresponding poll numbers for canidates.
 3. Program plots poll numbers and canidates as a bar graph for display.
 
-Tools Used: 
+###Tools Used:
+ 
 1. [Huffington Post API](http://elections.huffingtonpost.com/pollster/api)
 2. [jQuery](https://jquery.com/)
 3. Javascript, HTML, CSS
