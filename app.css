@@ -14,7 +14,7 @@ body {
     border: 2px solid #000000;
     width: 0;
     height: 35px;
-    background-color: #0099ff;
+    background-color: green;
     margin: 5px;
     float: left;
 }

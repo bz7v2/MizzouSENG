@@ -13,7 +13,7 @@
     <div id="graph"></div>
 
     <script>
-        var url = "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-democratic-primary";
+        var url = "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-gop-primary";
 
         $.ajax(url, {
             dataType: "jsonp",
@@ -25,12 +25,6 @@
                     candidateWrapper = candidateBar.enter().append("div").classed("group", true);
 
                 candidateWrapper.append("div")
-                    .classed("choice", true)
-                    .text(function(candidate) {
-                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
-                    });
-
-                candidateWrapper.append("div")
                     .classed("bar", true)
                     .transition()
                     .duration(1000)
@@ -39,6 +33,12 @@
                             return candidate.value * 10 + "px";
                         }
                     });
+                candidateWrapper.append("div")
+                    .classed("choice", true)
+                    .text(function(candidate) {
+                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
+                    });
+
             }
         });
     </script>
