@@ -8,4 +8,5 @@
  
 1. [Huffington Post API](http://elections.huffingtonpost.com/pollster/api)
 2. [jQuery](https://jquery.com/)
+3. [D3.js](https://d3js.org)
 3. Javascript, HTML, CSS
