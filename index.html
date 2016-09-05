@@ -10,6 +10,7 @@
 
 <body>
 
+    <h1>Democratic Presidential Primary Results</h1>
     <div id="graph"></div>
 
     <script>
@@ -22,7 +23,7 @@
             success: function(data) {
 
                 var candidateBar = d3.select("#graph").selectAll("div").data(data.estimates),
-                    candidateWrapper = candidateBar.enter().append("div").classed("group", true);
+                candidateWrapper = candidateBar.enter().append("div").classed("group", true);
 
                 candidateWrapper.append("div")
                     .classed("choice", true)
