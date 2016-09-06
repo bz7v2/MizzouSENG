@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Democratic Presidential Primary Data 2016</title>
+    <title>Presidential Primary Data 2016</title>
     <link href="app.css" rel="stylesheet" type="text/css">
     <script src="jquery-1.12.0.min.js"></script>
     <script src="d3.v3.min.js"></script>
@@ -10,6 +10,7 @@
 
 <body>
 
+    <h1>Republican Presidential Primary Results</h1>
     <div id="graph"></div>
 
     <script>
@@ -22,8 +23,13 @@
             success: function(data) {
 
                 var candidateBar = d3.select("#graph").selectAll("div").data(data.estimates),
-                    candidateWrapper = candidateBar.enter().append("div").classed("group", true);
+                candidateWrapper = candidateBar.enter().append("div").classed("group", true);
 
+                candidateWrapper.append("div")
+                    .classed("choice", true)
+                    .text(function(candidate) {
+                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
+                    });
                 candidateWrapper.append("div")
                     .classed("bar", true)
                     .transition()
@@ -33,11 +39,6 @@
                             return candidate.value * 10 + "px";
                         }
                     });
-                candidateWrapper.append("div")
-                    .classed("choice", true)
-                    .text(function(candidate) {
-                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
-                    });
 
             }
         });
@@ -46,6 +47,7 @@
 
 <body>
 
+    <h1>Democratic Presidential Primary Results</h1>
     <div id="graph1"></div>
 
     <script>
@@ -61,6 +63,11 @@
                     candidateWrapper = candidateBar.enter().append("div").classed("group", true);
 
                 candidateWrapper.append("div")
+                    .classed("choice", true)
+                    .text(function(candidate) {
+                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
+                    });
+                candidateWrapper.append("div")
                     .classed("bar", true)
                     .transition()
                     .duration(1000)
@@ -68,11 +75,6 @@
                         "width": function(candidate) {
                             return candidate.value * 10 + "px";
                         }
-                    });
-                candidateWrapper.append("div")
-                    .classed("choice", true)
-                    .text(function(candidate) {
-                        return candidate.choice + " " + Math.round(candidate.value * 100) / 100 + "%";
                     });
 
             }

@@ -5,11 +5,14 @@
 2. Program retrives corresponding poll numbers for canidates.
 3. Program plots poll numbers and canidates as a bar graph for display.
 
-## Links to Tools
-1. jquery-1.12.0.min.js https://github.com/holtwashere/MizzouSENG/blob/master/jquery-1.12.0.min.js
-2. d3.v3.min.js https://github.com/holtwashere/MizzouSENG/blob/master/d3.v3.min.js
-1. Huffington Post API http://elections.huffingtonpost.com/pollster/api 
+###Tools Used:
+ 
+1. [Huffington Post API](http://elections.huffingtonpost.com/pollster/api)
+2. [jQuery](https://jquery.com/)
+3. [D3.js](https://d3js.org)
+4. Javascript, HTML, CSS
 
-## Visualization description
+## Visualization description (bz7v2)
+
 1. The bar color is changed.
 2. The texts are moved at the end of the bars.
