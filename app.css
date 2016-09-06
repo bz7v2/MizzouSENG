@@ -1,7 +1,10 @@
 body {
     background-color: #EEE;
 }
-#graph .choice {
+.section-header {
+    font-family: sans-serif;
+}
+.choice {
     float: left;
     font-family: arial;
     font-size: 1.5em;
@@ -9,34 +12,22 @@ body {
     text-align: right;
     margin: 8px 5px;
 }
-#graph .bar {
+.bar {
     border-radius: 25px;
-    border: 2px solid #000000;
+    border: 2px solid #666666;
     width: 0;
     height: 35px;
-    background-color: green;
     margin: 5px;
     float: left;
 }
-#graph1 .choice {
-    float: left;
-    font-family: arial;
-    font-size: 1.5em;
-    min-width: 200px;
-    text-align: right;
-    margin: 8px 5px;
+#republican-graph .bar {
+    background-color: #cc181e;
 }
-#graph1 .bar {
-    border-radius: 25px;
-    border: 2px solid #000000;
-    width: 0;
-    height: 35px;
-    background-color: blue;
-    margin: 5px;
-    float: left;
+#democrat-graph .bar {
+    background-color: #2793e8;
 }
 .group:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
